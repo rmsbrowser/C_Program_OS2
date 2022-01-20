@@ -1,0 +1,23 @@
+!define BLANK ""
+U:\TOARCHIVE\C_Program_OS2\Proj01\main.obj : U:\TOARCHIVE\C_Program_OS2\Proj&
+01\main.c .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj01
+ *wcc386 main.c -i="C:\WATCOM/h;C:\WATCOM/h/os2" -w4 -e25 -zq -od -d2 -6r -b&
+t=os2 -fo=.obj -mf
+
+U:\TOARCHIVE\C_Program_OS2\Proj01\Proj01.exe : U:\TOARCHIVE\C_Program_OS2\Pr&
+oj01\main.obj .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj01
+ @%write Proj01.lk1 FIL main.obj
+ @%append Proj01.lk1 
+!ifneq BLANK ""
+ *wlib -q -n -b Proj01.imp 
+ @%append Proj01.lk1 LIBR Proj01.imp
+!endif
+ *wlink name Proj01 d all sys os2v2 op m op maxe=25 op q op symf @Proj01.lk1
+!ifneq BLANK ""
+ rc -i $[: -i C:\WATCOM\h -i C:\WATCOM\h\os2  Proj01.exe
+!endif
+

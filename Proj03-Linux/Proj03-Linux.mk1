@@ -1,0 +1,17 @@
+!define BLANK ""
+U:\TOARCHIVE\C_Program_OS2\Proj03-Linux\main.obj : U:\TOARCHIVE\C_Program_OS&
+2\Proj01\main.c .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj03-Linux
+ *wcc386 ..\Proj01\main.c -i="C:\WATCOM/lh" -w4 -e25 -zq -od -d2 -6r -bt=lin&
+ux -fo=.obj -mf
+
+U:\TOARCHIVE\C_Program_OS2\Proj03-Linux\Proj03-Linux.elf : U:\TOARCHIVE\C_Pr&
+ogram_OS2\Proj03-Linux\main.obj .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj03-Linux
+ @%write Proj03-Linux.lk1 FIL main.obj
+ @%append Proj03-Linux.lk1 
+ *wlink name Proj03-Linux d all sys linux op m op maxe=25 op q op symf @Proj&
+03-Linux.lk1
+

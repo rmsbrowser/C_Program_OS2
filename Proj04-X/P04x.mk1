@@ -1,0 +1,17 @@
+!define BLANK ""
+U:\TOARCHIVE\C_Program_OS2\Proj04-X\main.obj : U:\TOARCHIVE\C_Program_OS2\Pr&
+oj01\main.c .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj04-X
+ *wcc386 ..\Proj01\main.c -i="C:\WATCOM/novh" -w4 -e25 -zq -od -d2 -6s -bt=n&
+etware -fo=.obj -ms
+
+U:\TOARCHIVE\C_Program_OS2\Proj04-X\P04x.nlm : U:\TOARCHIVE\C_Program_OS2\Pr&
+oj04-X\main.obj .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj04-X
+ @%write P04x.lk1 FIL main.obj
+ @%append P04x.lk1 
+ *wlink name P04x d all sys netware op m op maxe=25 op q op symf @P04x.lk1
+ #
+

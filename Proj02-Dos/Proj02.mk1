@@ -1,0 +1,16 @@
+!define BLANK ""
+U:\TOARCHIVE\C_Program_OS2\Proj02-Dos\main.obj : U:\TOARCHIVE\C_Program_OS2\&
+Proj01\main.c .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj02-Dos
+ *wcc ..\Proj01\main.c -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -fo=.ob&
+j -ml
+
+U:\TOARCHIVE\C_Program_OS2\Proj02-Dos\Proj02.exe : U:\TOARCHIVE\C_Program_OS&
+2\Proj02-Dos\main.obj .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj02-Dos
+ @%write Proj02.lk1 FIL main.obj
+ @%append Proj02.lk1 
+ *wlink name Proj02 d all sys dos op m op maxe=25 op q op symf @Proj02.lk1
+
