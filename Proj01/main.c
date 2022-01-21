@@ -7,7 +7,7 @@ int main()
         int Interacoes = 0;
 	int Contador = 0;
 
-	printf("Numero de Interacoes..:");
+	printf("Digite o Numero de Interacoes..:");
         scanf("%d", &Interacoes);
 
 
