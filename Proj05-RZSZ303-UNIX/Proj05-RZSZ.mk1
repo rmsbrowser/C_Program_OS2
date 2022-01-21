@@ -1,0 +1,25 @@
+!define BLANK ""
+U:\TOARCHIVE\C_Program_OS2\Proj05-RZSZ303-Dos\RZ.obj : U:\TOARCHIVE\C_Progra&
+m_OS2\Proj05-RZSZ303-Dos\RZ.C .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj05-RZSZ303-Dos
+ *wcc386 RZ.C -i="C:\WATCOM/lh" -w4 -e25 -zq -od -d2 -6r -bt=linux -fo=.obj &
+-mf
+
+U:\TOARCHIVE\C_Program_OS2\Proj05-RZSZ303-Dos\SZ.obj : U:\TOARCHIVE\C_Progra&
+m_OS2\Proj05-RZSZ303-Dos\SZ.C .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj05-RZSZ303-Dos
+ *wcc386 SZ.C -i="C:\WATCOM/lh" -w4 -e25 -zq -od -d2 -6r -bt=linux -fo=.obj &
+-mf
+
+U:\TOARCHIVE\C_Program_OS2\Proj05-RZSZ303-Dos\Proj05-RZSZ.elf : U:\TOARCHIVE&
+\C_Program_OS2\Proj05-RZSZ303-Dos\RZ.obj U:\TOARCHIVE\C_Program_OS2\Proj05-R&
+ZSZ303-Dos\SZ.obj .AUTODEPEND
+ @U:
+ cd U:\TOARCHIVE\C_Program_OS2\Proj05-RZSZ303-Dos
+ @%write Proj05-RZSZ.lk1 FIL RZ.obj,SZ.obj
+ @%append Proj05-RZSZ.lk1 
+ *wlink name Proj05-RZSZ d all sys linux op m op maxe=25 op q op symf @Proj0&
+5-RZSZ.lk1
+
